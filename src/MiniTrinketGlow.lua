@@ -154,10 +154,10 @@ local function Run()
 
 				if slot then
 					local start, duration, usable = GetInventoryItemCooldown("player", slot)
-					local onCD = usable == 1 and start > 0 and duration > 0
+					local trinketReady = usable == 1 and start == 0 and duration == 0
 					local inCombat = UnitAffectingCombat("player")
 					local onlyCombat = db.CombatOnly
-					local glow = not onCD and (not onlyCombat or inCombat)
+					local glow = trinketReady and (not onlyCombat or inCombat)
 
 					Glow(button, glow)
 				end
