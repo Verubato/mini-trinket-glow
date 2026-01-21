@@ -5,6 +5,7 @@
 ## Version: 1.0.1
 ## IconTexture: Interface\AddOns\MiniTrinketGlow\Icon.blp
 ## X-Curse-Project-ID: 1425196
+## SavedVariables: MiniTrinketGlowDB
 
 Libs\LibCustomGlow-1.0\LibCustomGlow-1.0.xml
 Libs\LibStub\LibStub.lua
