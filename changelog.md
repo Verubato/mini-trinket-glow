@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3
+
+12.1 version support
+
 ## 1.0.2
 
 Fixed settings being lost on reload.
