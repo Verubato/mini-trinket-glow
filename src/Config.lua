@@ -22,16 +22,14 @@ function M:Init()
 		return
 	end
 
-	local version = C_AddOns.GetAddOnMetadata(addonName, "Version")
-	local title = panel:CreateFontString(nil, "ARTWORK", "GameFontNormalLarge")
-	title:SetPoint("TOPLEFT", 0, -verticalSpacing)
-	title:SetText(string.format("%s - %s", addonName, version))
+	local header = mini:PanelHeader({
+		Parent = panel,
+		Description = "Glow trinkets on your action bars when they're off cooldown.",
+		Y = -verticalSpacing,
+		Gap = 8,
+	})
 
-	local description = panel:CreateFontString(nil, "ARTWORK", "GameFontWhite")
-	description:SetPoint("TOPLEFT", title, "BOTTOMLEFT", 0, -8)
-	description:SetText("Glow trinkets on your action bars when they're off cooldown.")
-
-	local combatOnlyChk = mini:CreateSettingCheckbox({
+	local combatOnlyChk = mini:Checkbox({
 		Parent = panel,
 		LabelText = "Combat only",
 		Tooltip = "Only glow when in combat.",
@@ -44,7 +42,7 @@ function M:Init()
 		end,
 	})
 
-	combatOnlyChk:SetPoint("TOPLEFT", description, "BOTTOMLEFT", 0, -verticalSpacing)
+	combatOnlyChk:SetPoint("TOPLEFT", header.Anchor, "BOTTOMLEFT", 0, -verticalSpacing)
 
 	SLASH_MINITRINKETGLOW1 = "/minitrinketglow"
 	SLASH_MINITRINKETGLOW2 = "/minitg"
