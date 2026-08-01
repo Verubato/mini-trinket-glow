@@ -25,7 +25,6 @@ function M:Init()
 	local header = mini:PanelHeader({
 		Parent = panel,
 		Description = "Glow trinkets on your action bars when they're off cooldown.",
-		Y = -verticalSpacing,
 		Gap = 8,
 	})
 
