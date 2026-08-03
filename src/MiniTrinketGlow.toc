@@ -1,4 +1,4 @@
-## Interface: 120100, 120001, 120000, 110207, 50504, 40402, 38000, 30405, 20506, 11509
+## Interface: 120100, 120007, 120001, 120000, 110207, 50504, 40402, 38002, 38000, 30405, 20506, 11509
 ## Title: MiniTrinketGlow
 ## Notes: Glows trinkets on your action bars when they're off cooldown.
 ## Author: Verz
