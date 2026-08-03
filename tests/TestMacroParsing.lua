@@ -96,17 +96,28 @@ fw.describe("MiniTrinketGlow - trinket detection", function()
 		fw.falsy(env.RunAndCheckGlow(), "no body")
 	end)
 
-	-- Known gap
-	--
-	-- The parser looks for the slot number preceded by a space, so a conditional written
-	-- flush against the number is missed. The macro is valid and the addon's own comment
-	-- lists it as a supported shape, so this is a defect rather than a decision - marked
-	-- expected-to-fail so the marker disappears the moment it is fixed.
-
-	fw.xfail("reads a conditional written flush against the slot number", function()
+	fw.it("reads a conditional written flush against the slot number", function()
+		-- No space between the conditional and the slot, which is legal and common.
 		env.UseMacro("/use [mod:shift,@player]13")
 
 		fw.truthy(env.RunAndCheckGlow(), "/use [mod:shift,@player]13")
+
+		env.UseMacro("/use [combat]14")
+
+		fw.truthy(env.RunAndCheckGlow(), "/use [combat]14")
+	end)
+
+	fw.it("does not mistake a longer number for a trinket slot", function()
+		-- The boundary either side of the slot number is what keeps this apart. Matching
+		-- "13" loosely would glow the button for anything numbered 130 and up.
+		env.UseMacro("/use 130")
+		fw.falsy(env.RunAndCheckGlow(), "/use 130")
+
+		env.UseMacro("/use 1413")
+		fw.falsy(env.RunAndCheckGlow(), "/use 1413")
+
+		env.UseMacro("/use 213")
+		fw.falsy(env.RunAndCheckGlow(), "/use 213")
 	end)
 
 	-- Cooldown and combat gating

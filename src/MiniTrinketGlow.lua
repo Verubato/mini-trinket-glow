@@ -41,10 +41,16 @@ local function ParseMacroForTrinketSlot(body)
 			-- /use    13
 			-- /use [combat] 13
 			-- /use [mod:shift,@player]14
-			if line:find(" " .. trinketSlot1, 5, true) then
+			--
+			-- Matched on word boundaries rather than by looking for a leading space: the last
+			-- form runs the slot number straight on from the conditional, so requiring the
+			-- space missed it. The trailing boundary is what stops "/use 130" counting as 13.
+			local arguments = line:sub(5)
+
+			if arguments:match("%f[%w]" .. trinketSlot1 .. "%f[%W]") then
 				return trinketSlot1
 			end
-			if line:find(" " .. trinketSlot2, 5, true) then
+			if arguments:match("%f[%w]" .. trinketSlot2 .. "%f[%W]") then
 				return trinketSlot2
 			end
 		end
