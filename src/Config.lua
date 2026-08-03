@@ -7,6 +7,7 @@ local db
 local dbDefaults = {
 	CombatOnly = true,
 }
+---@class Config
 local M = {}
 addon.Config = M
 
