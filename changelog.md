@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.2
+
+Fixed trinket detection for macros with a conditional written flush against the slot number, and a load error when no other addon provides LibStub.
+
 ## 1.1.1
 
 Updated interface versions for the latest Classic, TBC and Mists builds.
