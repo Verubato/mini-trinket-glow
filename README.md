@@ -16,7 +16,7 @@ Feedback and feature requests are more than welcome!
 
 ## Screenshots
 
-![MiniTrinketGlow screenshot](https://raw.githubusercontent.com/Verubato/mini-trinket-glow/main/assets/Animation.gif)
+![MiniTrinketGlow screenshot](https://raw.githubusercontent.com/Verubato/mini-trinket-glow/main/assets/Screenshots/Animation.gif)
 
 ## Download
 
