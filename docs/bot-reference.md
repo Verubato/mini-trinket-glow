@@ -35,6 +35,10 @@ use a trinket the addon schedules a re-check for just after the cooldown
 ends, so the glow returns as soon as the trinket is ready. Passive trinkets
 that the game does not report as usable do not glow.
 
+A glow is cleared when the button stops holding a trinket, whether because the
+trinket was unequipped, the action was dragged away, or the bar paged to
+something else.
+
 The glow itself is LibCustomGlow's proc glow. If LibCustomGlow is somehow
 unavailable it falls back to the Blizzard action button overlay glow.
 
