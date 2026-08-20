@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.6
+
+Fixed a glow staying on a button after its trinket was unequipped or the action was moved away, and greatly reduced the work done while in combat.
+
 ## 1.1.5
 
 Added a Mini category so the addon groups with the other Mini addons in the addon list.
