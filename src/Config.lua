@@ -30,6 +30,7 @@ function M:Init()
 		Parent = panel,
 		Description = "Glow trinkets on your action bars when they're off cooldown.",
 		Gap = 8,
+		Divider = true,
 	})
 
 	local combatOnlyChk = mini:Checkbox({
