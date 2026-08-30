@@ -3,7 +3,7 @@
 ## Notes: Glows trinkets on your action bars when they're off cooldown.
 ## Category: Mini
 ## Author: Verz
-## Version: 1.1.6
+## Version: 1.1.7
 ## IconTexture: Interface\AddOns\MiniTrinketGlow\Icon.blp
 ## X-Curse-Project-ID: 1425196
 ## SavedVariables: MiniTrinketGlowDB

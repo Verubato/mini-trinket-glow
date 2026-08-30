@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.7
+
+UI improvements.
+
 ## 1.1.6
 
 Fixed a glow staying on a button after its trinket was unequipped or the action was moved away, and greatly reduced the work done while in combat.
